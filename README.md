@@ -1,6 +1,6 @@
 Sobre
 ========
-Web_crawler é uma estrutura de rastreamento e raspagem da web de alto nível, usada para rastrear sites e extrair dados estruturados de suas páginas.
+web_crawler é uma aplicação de rastreamento e raspagem da web de alto nível, usada para rastrear sites e extrair dados estruturados de suas páginas.
 
 <!-- Requisitos -->
 ## :books: Requisitos
