@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fonte:</strong>
+  <%= @newsletter.fonte %>
+</p>
+
+<p>
+  <strong>Url noticia:</strong>
+  <%= @newsletter.url_noticia %>
+</p>
+
+<p>
+  <strong>Titulo noticia:</strong>
+  <%= @newsletter.titulo_noticia %>
+</p>
+
+<p>
+  <strong>Data publicacao:</strong>
+  <%= @newsletter.data_publicacao %>
+</p>
+
+<p>
+  <strong>Data coleta:</strong>
+  <%= @newsletter.data_coleta %>
+</p>
+
+<p>
+  <strong>Corpo noticia:</strong>
+  <%= @newsletter.corpo_noticia %>
+</p>
+
+<%= link_to 'Edit', edit_newsletter_path(@newsletter) %> |
+<%= link_to 'Back', newsletters_path %>

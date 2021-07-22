@@ -1,0 +1,20 @@
+version: "2.2"
+services:
+  myapp:
+    build: .
+    depends_on:
+      - postgres
+    command: bundle exec rails server -p 5000 -b '0.0.0.0'
+    volumes:
+      - .:/myapp
+    ports:
+      - "5000:5000" 
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432" 
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345678
+      # POSTGRES_DATABASE: web_crawler_development
+      POSTGRES_PORT: 5432     

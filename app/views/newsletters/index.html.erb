@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+<div class="categdespesas index">
+  <h1>Newsletters</h1>
+
+  <%= form_tag newsletters_path( format:"html"), :method => 'get' do %>  
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+        
+          <div class="col-lg-5  form-group">  
+            <%= text_field_tag :pesquisa, params[:pesquisa], :class => 'form-control', :placeholder=>"Pesquisar por “Fonte/Origem”, “título” e “tags”" %>  
+          </div>
+          <div class="col-lg-5 form-group">
+             <%= submit_tag "Pesquisar", :class => "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end  %>    
+  <%= button_to '+ Buscar Notícias', scrape_newsletters_path, :class => "btn btn-primary"%> 
+  <div class="table-responsive">
+    <table class="table table-hover table-striped" cellpadding="0" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Fonte/Origem</th>
+          <th>Url noticia</th>
+          <th>Titulo noticia</th>
+          <th>Data publicacao</th>
+          <th>Data coleta</th>
+          <th>Corpo noticia</th>
+          <th>Ações</th>
+        </tr> 
+      </thead>
+      <tbody>
+        <% @newsletters.each do |newsletter| %>
+          <tr>
+            <td><%= newsletter.fonte %></td>
+            <td>
+              <a href=<%= newsletter.url_noticia %> target="_blank" >
+                <%= newsletter.url_noticia %>
+              </a>
+            </td>
+            <td><%= newsletter.titulo_noticia %></td>
+            <td><%= newsletter.data_publicacao %></td>
+            <td><%= newsletter.data_coleta %></td>
+            <td><%= newsletter.corpo_noticia %></td>
+            <td><%= link_to "Detalhes", newsletter.url_noticia, :target => "_blank"  %><br> <%= link_to 'Excluir', newsletter, method: :delete, data: { confirm: 'Deseja excluir '+newsletter.titulo_noticia.to_s+' ?' } %> </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="row">
+    <%= will_paginate @newsletters %>
+  </div>  
+</div>
+
+
+
+
+
+
+
+
+
+
