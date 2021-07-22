@@ -1,3 +1,7 @@
+Sobre
+========
+Web_crawler é uma estrutura de rastreamento e raspagem da web de alto nível, usada para rastrear sites e extrair dados estruturados de suas páginas.
+
 <!-- Requisitos -->
 ## :books: Requisitos
 - Ter [**Git**](https://git-scm.com/) para clonar o projeto.
@@ -14,7 +18,7 @@ instruções sobre como configurar o projeto localmente.
   # Subir containers:
   $ docker-compose up -d
 
-  # Rodar as migrations:
+  # Criar o banco e rodar as migrations:
   $ docker-compose run myapp bundle exec rake db:create db:migrate
 
   # Rodar a aplicação:

@@ -23,7 +23,6 @@ default: &default
   username: postgres
   password: 12345678
   host: postgres
-  # socket: /var/run/postgresql/.s.PGSQL.5432
 
 development:
   <<: *default

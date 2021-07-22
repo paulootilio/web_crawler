@@ -16,5 +16,4 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 12345678
-      # POSTGRES_DATABASE: web_crawler_development
       POSTGRES_PORT: 5432     
