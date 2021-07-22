@@ -25,7 +25,7 @@ instruções sobre como configurar o projeto localmente.
   $ docker-compose up
 
   # Acessar aplicação:
-  $ http://localhost:5000/
+  [**localhost:5000**](http://localhost:5000/)
 ```
 
 Feito por Paulo Otilio 👋🏻 [Get in touch!](https://github.com/paulootilio)
